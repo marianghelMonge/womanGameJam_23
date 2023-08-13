@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &9149551729721312350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,13 +142,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cde4c8e7c82b14091eb062019d213f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 7.5
-  jumpForce: 5
+  velocidad: 1.6
+  jumpForce: 2
   rigidbody: {fileID: 2412421348289998715}
-  unSalto: {fileID: 2050813478847242052}
-  suelo:
+  CheckUnSalto: {fileID: 0}
+  EsSuelo:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
 --- !u!1 &7567790339617262997
 GameObject:
   m_ObjectHideFlags: 0
