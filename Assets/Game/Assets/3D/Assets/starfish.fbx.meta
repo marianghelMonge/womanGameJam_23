@@ -3,7 +3,12 @@ guid: 62c0699c985b89543bc2c2e884b9cd64
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: starfish_mat
+    second: {fileID: 2100000, guid: cf064876cf724c349ae7087dba861620, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
