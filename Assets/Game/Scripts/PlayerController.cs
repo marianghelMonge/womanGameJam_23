@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Componentes")]
     public Rigidbody2D rigidbody;
+
+    [Header("Al suelo")]
+    public Transform CheckUnSalto;
+    public LayerMask EsSuelo;
+    private bool isPlayerSuelo;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +27,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         setVelocidad();
-        salto();
+        SaltaUnaVez();
     }
 
     private void setVelocidad(){
@@ -30,9 +35,19 @@ public class PlayerController : MonoBehaviour
     }
 
     //getButton desde hasta - getbuttondown presion abajo
-    private void salto(){
+    /*private void salto(){
         if(Input.GetButtonDown("Jump")){
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+            
+        }
+    }*/
+
+    private void SaltaUnaVez(){
+         isPlayerSuelo = Physics2D.OverlapCircle(CheckUnSalto.position, .2f,EsSuelo);//verificaPlayerTocaSuelo
+        if(Input.GetButtonDown("Jump")){
+            if(isPlayerSuelo){
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+            }
+
         }
     }
 }
