@@ -29,8 +29,11 @@ public class Teleport : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Player")){
+        GetComponent<Collider2D>().enabled = false;
         ChangeCamera();
         StartCoroutine(GoBack());
+        }
     }
 
     void ChangeCamera() {
@@ -65,6 +68,9 @@ public class Teleport : MonoBehaviour
         IEnumerator GoBack() {
     yield return new WaitForSeconds(12f);
     ChangeCamera();
+    yield return new WaitForSeconds(12f);
+    GetComponent<Collider2D>().enabled = true;
+    
     }
 
     private void checkCamara2Active(){
