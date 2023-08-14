@@ -30,6 +30,7 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         ChangeCamera();
+        StartCoroutine(GoBack());
     }
 
     void ChangeCamera() {
@@ -55,10 +56,15 @@ public class Teleport : MonoBehaviour
         tiempoTXT.text = tiempo;
         //timerTxt = tiempo;
         if(timer < 0){
-            ChangeCamera();
+            //ChangeCamera();
             timer = tiempoInicial;
         }
-        Debug.Log(tiempo);
+       // Debug.Log(tiempo);
+    }
+
+        IEnumerator GoBack() {
+    yield return new WaitForSeconds(12f);
+    ChangeCamera();
     }
 
     private void checkCamara2Active(){
