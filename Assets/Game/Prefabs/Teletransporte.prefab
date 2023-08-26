@@ -146,7 +146,6 @@ GameObject:
   - component: {fileID: 1806007634329367725}
   - component: {fileID: 7588289454030994441}
   - component: {fileID: 5225906886159195710}
-  - component: {fileID: 7764006779707629069}
   m_Layer: 7
   m_Name: Teletransportador
   m_TagString: Untagged
@@ -266,23 +265,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7764006779707629069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6757854630146672307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816b1448772cc80429487651a996c2c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiempoInicial: 5
-  timer: 5
-  tiempoTXT: {fileID: 1608838949430809031}
-  camera1: {fileID: 0}
-  camera2: {fileID: 0}
 --- !u!1 &7800153307349005693
 GameObject:
   m_ObjectHideFlags: 0
